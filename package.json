@@ -1,0 +1,16 @@
+{
+  "name": "snippetscopybook",
+  "version": "1.0.0",
+  "description": "Paragraph and clipboard manager",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "SebiMonsrud",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^29.0.0"
+  }
+}
