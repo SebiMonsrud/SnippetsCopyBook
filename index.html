@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="no">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
 </head>
+
 <body>
     <div class="app-container">
         <!-- Sidebar -->
@@ -55,7 +57,7 @@
                     <i class="ph ph-plus"></i> Ny Paragraf
                 </button>
             </header>
-            
+
             <div id="snippets-grid" class="snippets-grid">
                 <!-- Snippets will be injected here -->
             </div>
@@ -71,14 +73,15 @@
                     <i class="ph ph-copy"></i> Kopier Valgte
                 </button>
             </header>
-            
+
             <div class="builder-content-area">
                 <div id="builder-list" class="builder-list">
                     <!-- Builder items will be injected here -->
                 </div>
-                
+
                 <div class="add-builder-form">
-                    <input type="text" id="new-builder-input" placeholder="Ny service-tekst (f.eks: Utført skift av mikrofilter)...">
+                    <input type="text" id="new-builder-input"
+                        placeholder="Ny service-tekst (f.eks: Utført skift av mikrofilter)...">
                     <button class="primary-btn" id="add-builder-btn">
                         <i class="ph ph-plus"></i> Legg til valgboks
                     </button>
@@ -91,17 +94,17 @@
             <header class="main-header">
                 <h1>Innstillinger</h1>
             </header>
-            
+
             <div class="settings-grid">
                 <section class="settings-section">
                     <h3>Utseende</h3>
                     <div class="theme-toggle">
                         <label class="theme-option">
-                            <input type="radio" name="theme" value="dark" checked> 
+                            <input type="radio" name="theme" value="dark" checked>
                             <span>Mørkt Tema</span>
                         </label>
                         <label class="theme-option">
-                            <input type="radio" name="theme" value="light"> 
+                            <input type="radio" name="theme" value="light">
                             <span>Lyst Tema</span>
                         </label>
                     </div>
@@ -109,9 +112,11 @@
 
                 <section class="settings-section">
                     <h3>Dine Maler (Templates)</h3>
-                    <p class="settings-help">Skriv <code>&lt;navn&gt;</code> i en paragraf for automatisk erstatning ved kopiering.</p>
-                    <p class="settings-help">Innebygd tag: <code>&lt;dato&gt;</code> oversettes til f.eks 29/03-26.</p>
-                    
+                    <p class="settings-help"> <code>&lt;navn&gt;</code> og <code>&lt;dato&gt;</code> er forhånds lagt
+                        inn i koden. Her må du bare legge inn <code>&lt;navn&gt;</code> selv under</p>
+                    <p class="settings-help"> Disse legges inn automatisk på toppen. Ser slik ut: f.eks SEMO, 29/03-26
+                    </p>
+
                     <div class="templates-table-container">
                         <table class="templates-table">
                             <thead>
@@ -126,13 +131,17 @@
                             </tbody>
                         </table>
                     </div>
-                    
+
                     <div class="add-template-form">
-                        <input type="text" id="new-template-key" placeholder="F.eks: temp1">
+                        <input type="text" id="new-template-key" placeholder="F.eks: navn">
                         <input type="text" id="new-template-value" placeholder="F.eks: SEMO">
                         <button class="primary-btn" id="add-template-btn">Legg til</button>
                     </div>
                 </section>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px; margin-bottom: 20px; font-size: 0.85em; opacity: 0.5;">
+                Laget av Sebastian Monsrud
             </div>
         </main>
     </div>
@@ -155,8 +164,10 @@
         <div class="modal-content">
             <h3 id="snippet-modal-title">Ny Paragraf</h3>
             <input type="hidden" id="editing-snippet-id">
-            <input type="text" id="snippet-title-input" placeholder="Overskrift..." autofocus style="margin-bottom: 12px; font-weight: 600;">
-            <textarea id="snippet-text-input" placeholder="Skriv inn tekstparagraf her. Bruk <temp1> etc for maler..." rows="8"></textarea>
+            <input type="text" id="snippet-title-input" placeholder="Overskrift..." autofocus
+                style="margin-bottom: 12px; font-weight: 600;">
+            <textarea id="snippet-text-input" placeholder="Skriv inn tekstparagraf her. Bruk <temp1> etc for maler..."
+                rows="8"></textarea>
             <div class="modal-actions">
                 <button class="secondary-btn" id="cancel-snippet-btn">Avbryt</button>
                 <button class="primary-btn" id="save-snippet-btn">Lagre</button>
@@ -169,4 +180,5 @@
 
     <script src="renderer.js"></script>
 </body>
+
 </html>
