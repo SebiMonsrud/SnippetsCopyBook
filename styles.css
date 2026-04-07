@@ -4,23 +4,23 @@
     --bg-card: #202228;
     --bg-card-hover: #292B31;
     --bg-input: #16181D;
-    
+
     --text-primary: #FFFFFF;
     --text-secondary: #94A3B8;
-    
+
     --accent-color: #3B82F6;
     --accent-hover: #2563EB;
-    
+
     --border-color: #2D313A;
     --border-focus: #3B82F6;
-    
+
     --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
     --shadow-toast: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
-    
+
     --border-radius-sm: 6px;
     --border-radius-md: 10px;
     --border-radius-lg: 16px;
-    
+
     --transition-speed: 0.2s;
 }
 
@@ -30,12 +30,12 @@ body.theme-light {
     --bg-card: #FFFFFF;
     --bg-card-hover: #F1F5F9;
     --bg-input: #FFFFFF;
-    
+
     --text-primary: #0F172A;
     --text-secondary: #64748B;
-    
+
     --border-color: #E2E8F0;
-    
+
     --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     --shadow-toast: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
@@ -50,7 +50,7 @@ body {
     font-family: 'Inter', sans-serif;
     background-color: var(--bg-main);
     color: var(--text-primary);
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 .app-container {
@@ -96,7 +96,8 @@ body {
     transition: all var(--transition-speed);
 }
 
-.icon-btn:hover, .icon-btn.active {
+.icon-btn:hover,
+.icon-btn.active {
     color: var(--text-primary);
     background-color: rgba(59, 130, 246, 0.15);
 }
@@ -165,13 +166,15 @@ body {
     font-size: 18px;
 }
 
-.sidebar-footer-btn:hover, .sidebar-footer-btn.active {
+.sidebar-footer-btn:hover,
+.sidebar-footer-btn.active {
     background-color: rgba(59, 130, 246, 0.15);
     color: var(--text-primary);
 }
 
 /* Main Content */
-.main-content, .settings-content {
+.main-content,
+.settings-content {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -279,7 +282,8 @@ body {
     gap: 20px;
     overflow-y: auto;
     flex: 1;
-    align-content: start; /* Fixes layout jumps */
+    align-content: start;
+    /* Fixes layout jumps */
 }
 
 /* Draggable snippets */
@@ -343,17 +347,18 @@ body {
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 8px;
-    margin-left: 16px; /* Space for the drag handle */
-    pointer-events: none; 
+    margin-left: 16px;
+    /* Space for the drag handle */
+    pointer-events: none;
 }
 
 .snippet-text {
     color: var(--text-secondary);
     font-size: 14px;
     line-height: 1.6;
-    flex: 1;
-    user-select: text; 
-    pointer-events: none; 
+    flex-grow: 1;
+    user-select: text;
+    pointer-events: none;
     white-space: pre-wrap;
     word-break: break-word;
     margin-top: 8px;
@@ -459,7 +464,8 @@ body {
     font-size: 14px;
 }
 
-.templates-table th, .templates-table td {
+.templates-table th,
+.templates-table td {
     padding: 12px 16px;
     border-bottom: 1px solid var(--border-color);
 }
@@ -500,7 +506,10 @@ body {
 /* Modals */
 .modal {
     position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(4px);
     display: flex;
@@ -537,7 +546,8 @@ body {
     font-size: 18px;
 }
 
-.modal-content input, .modal-content textarea {
+.modal-content input,
+.modal-content textarea {
     width: 100%;
     background-color: var(--bg-input);
     border: 1px solid var(--border-color);
@@ -555,7 +565,8 @@ body {
     resize: vertical;
 }
 
-.modal-content input:focus, .modal-content textarea:focus {
+.modal-content input:focus,
+.modal-content textarea:focus {
     border-color: var(--accent-color);
 }
 
