@@ -415,8 +415,14 @@ function renderSnippets() {
         card.onclick = (e) => {
             // Prevent copy if clicking on action buttons or drag handle
             if (e.target.closest('.snippet-actions') || e.target.closest('.drag-handle')) return;
+            
+            let header = "<navn>, <dato>";
+            header = parseSnippet(header);
+            
             const parsedText = parseSnippet(snippet.text);
-            window.electronAPI.copyToClipboard(parsedText);
+            const fullText = header + "\n" + parsedText;
+            
+            window.electronAPI.copyToClipboard(fullText);
             showToast();
         };
 
