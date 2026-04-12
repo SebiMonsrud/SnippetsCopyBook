@@ -34,6 +34,11 @@
   "build": {
     "appId": "com.sebimonsrud.snippetscopybook",
     "productName": "SnippetsCopyBook",
+    "files": [
+      "**/*",
+      "!EXE",
+      "!EXE/**/*"
+    ],
     "win": {
       "target": [
         "nsis",

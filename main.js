@@ -15,7 +15,7 @@ function initData() {
     try {
       let currentData = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
       let modified = false;
-      
+
       // Migration for older saves that might be missing completely new arrays
       if (!currentData.builderItems) {
         currentData.builderItems = defaultData.builderItems;
@@ -25,7 +25,7 @@ function initData() {
         currentData.settings = defaultData.settings;
         modified = true;
       }
-      
+
       if (modified) {
         fs.writeFileSync(dataPath, JSON.stringify(currentData, null, 2));
       }
